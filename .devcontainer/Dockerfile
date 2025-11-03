@@ -13,8 +13,8 @@ ENV DOCKER_GID=999
 # MY_PROXY_IP is the host IP
 ENV MY_PROXY_IP=host.docker.internal
 ENV MY_PROXY_PORT=3128
-ENV http_proxy=http://$MY_PROXY_IP:$MY_PROXY_PORT
-ENV https_proxy=http://$MY_PROXY_IP:$MY_PROXY_PORT
+# ENV http_proxy=http://$MY_PROXY_IP:$MY_PROXY_PORT
+# ENV https_proxy=http://$MY_PROXY_IP:$MY_PROXY_PORT
 
 SHELL ["/bin/bash", "-c"]
 
