@@ -43,6 +43,7 @@ RUN apt-get install -y \
     g++-17 \
     gdb \
     git \
+    git-lfs \
     cmake \
     ninja-build \
     autoconf \
