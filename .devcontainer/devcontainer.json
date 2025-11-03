@@ -1,6 +1,6 @@
 {
 
-  "name": "sandbox",
+  "name": "bico_ubuntu",
   // Build configuration
   "build": {
     "dockerfile": "Dockerfile",
@@ -9,45 +9,13 @@
   },
   // Container runtime configuration
   "runArgs": [
-    "--name", "sandbox",
-    "--privileged",
+    "--name", "bico_ubuntu",
+    // "--privileged",
     // "--network", "host",
   ],
 
-  
-  "mounts": [
-    // "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
-    // "source=/usr/bin/docker,target=/usr/bin/docker,type=bind"
-  ],
-
-  // "features": {
-  //   "ghcr.io/devcontainers/features/docker-in-docker:2": {
-  //     "version": "latest"
-  //   }
-  // },
-
   // "postCreateCommand": "" ,
-  "postStartCommand": "/entrypoint.sh",
+  // "postStartCommand": "",
   // "postAttachCommand": "",
-
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-vscode.cpptools",
-        "ms-vscode.cmake-tools",
-        "ms-vscode.live-server"
-      ],
-      "settings": {
-        "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-        "C_Cpp.default.intelliSenseMode": "gcc-x64",
-        "terminal.integrated.defaultProfile.linux": "fish",
-        "terminal.integrated.profiles.linux": {
-          "fish": {
-            "path": "/usr/bin/fish"
-          }
-        }
-      }
-    }
-  }
   
 }
