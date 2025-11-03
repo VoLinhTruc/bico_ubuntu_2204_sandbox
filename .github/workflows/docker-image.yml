@@ -35,3 +35,14 @@ jobs:
         file: .devcontainer/Dockerfile
         push: true
         tags: ghcr.io/volinhtruc/bico_ubuntu:22.04_0.0.0
+        
+    - name: Trigger bico_ubuntu_2204_dind workflow
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          github.rest.repos.createDispatchEvent({
+            owner: 'VoLinhTruc',
+            repo: 'bico_ubuntu_2204_dind',
+            event_type: 'trigger-from-bico-ubuntu-2204-sandbox'
+          })
