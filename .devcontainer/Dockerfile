@@ -29,7 +29,8 @@ RUN apt-get update && apt-get install -y \
     vim \
     nano \
     fish \
-    tmux
+    tmux \
+    dos2unix
 
 # --- Networking tools ---
 RUN apt-get install -y \
