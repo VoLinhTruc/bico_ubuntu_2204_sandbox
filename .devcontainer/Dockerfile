@@ -1,7 +1,6 @@
 FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV DISPLAY=host.docker.internal:0
 ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US:en
 
