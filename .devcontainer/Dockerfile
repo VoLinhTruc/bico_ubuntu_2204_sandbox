@@ -6,10 +6,9 @@ ENV LANG=en_US.UTF-8 \
 
 ENV USERNAME=developer
 ENV USER_GID=1000
-ENV DOCKER_GID=999
 
-ENV MY_PROXY_IP=host.docker.internal
-ENV MY_PROXY_PORT=3128
+# ENV MY_PROXY_IP=host.docker.internal
+# ENV MY_PROXY_PORT=3128
 # ENV http_proxy=http://$MY_PROXY_IP:$MY_PROXY_PORT
 # ENV https_proxy=http://$MY_PROXY_IP:$MY_PROXY_PORT
 # ENV NO_PROXY="localhost,127.0.0.1,::1,*.local"
@@ -78,8 +77,6 @@ RUN echo "root:1" | chpasswd
 # Create a non-root user
 RUN groupadd --gid $USER_GID $USERNAME && \
     useradd --uid $USER_GID --gid $USERNAME --shell /bin/bash --create-home $USERNAME
-RUN groupadd -for -g $DOCKER_GID docker \
- && usermod -aG docker $USERNAME
 RUN echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # # Switch to the USERNAME
