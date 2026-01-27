@@ -9,6 +9,8 @@ ENV USER_GID=1000
 
 # ENV MY_PROXY_IP=host.docker.internal
 # ENV MY_PROXY_PORT=3128
+# ENV HTTP_PROXY=http://$MY_PROXY_IP:$MY_PROXY_PORT
+# ENV HTTPS_PROXY=http://$MY_PROXY_IP:$MY_PROXY_PORT
 # ENV http_proxy=http://$MY_PROXY_IP:$MY_PROXY_PORT
 # ENV https_proxy=http://$MY_PROXY_IP:$MY_PROXY_PORT
 # ENV NO_PROXY="localhost,127.0.0.1,::1,*.local"
