@@ -30,7 +30,8 @@ RUN apt-get update && apt-get install -y \
     nano \
     fish \
     tmux \
-    dos2unix
+    dos2unix \
+    pcmanfm
 
 # --- Networking tools ---
 RUN apt-get install -y \
