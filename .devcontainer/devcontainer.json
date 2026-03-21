@@ -9,13 +9,21 @@
   },
   // Container runtime configuration
   "runArgs": [
-    "--name", "bico_ubuntu",
-    // "--privileged",
+    "--name", "/bico_ubuntu_2204_sandbox",
+    "--privileged",
     // "--network", "host",
   ],
+  "mounts": [
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+  ],
+  // Add DISPLAY environment variable
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}"
+  },
 
-  // "postCreateCommand": "" ,
+  // "postCreateCommand": "/entrypoint.sh" ,
   // "postStartCommand": "",
   // "postAttachCommand": "",
-  
+
+
 }
