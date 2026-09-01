@@ -62,9 +62,16 @@ RUN apt-get install -y \
     python3-pip \
     python3-dev
 
+# --- Package for buildroot
+RUN apt-get install -y \
+    cpio \
+    unzip \
+    rsync \
+    bc
+
 # Clean up apt cache to reduce image size
-RUN apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# RUN apt-get clean && \
+#     rm -rf /var/lib/apt/lists/*
 
 
 # Generate locale
