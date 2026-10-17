@@ -31,7 +31,8 @@ RUN apt-get update && apt-get install -y \
     fish \
     tmux \
     dos2unix \
-    pcmanfm
+    pcmanfm \
+    apt-file
 
 # --- Networking tools ---
 RUN apt-get install -y \
@@ -67,7 +68,38 @@ RUN apt-get install -y \
     cpio \
     unzip \
     rsync \
-    bc
+    bc \
+    libncurses-dev
+
+# --- Package for yocto
+RUN apt-get install -y \
+    build-essential \
+    chrpath \
+    cpio \
+    debianutils \
+    diffstat \
+    file \
+    gawk \
+    gcc \
+    git \
+    iputils-ping \
+    libacl1 \
+    libcrypt-dev \
+    locales \
+    python3 \
+    python3-git \
+    python3-jinja2 \
+    python3-pexpect \
+    python3-pip \
+    python3-subunit \
+    socat \
+    texinfo \
+    unzip \
+    wget \
+    xz-utils \
+    zstd \
+    lz4
+
 
 # Clean up apt cache to reduce image size
 # RUN apt-get clean && \
